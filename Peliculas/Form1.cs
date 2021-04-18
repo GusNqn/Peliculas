@@ -8,13 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Peliculas
+namespace Películas
 {
-    public partial class Form1 : Form
+    public partial class fPeliculas : Form
     {
-        public Form1()
+        #region variables globales
+        String[] aPeliculas;
+        int Ultimo = -1;
+        int Tope = 20;
+        #endregion
+        public fPeliculas()
         {
             InitializeComponent();
+            aPeliculas = new String[20];
         }
+
+        private void tPeliculas_TextChanged(object sender, EventArgs e)
+        {
+            ++Ultimo;
+            if (tPeliculas.Text == "")
+                MessageBox.Show("Ingrese el nombre de la película");
+            else (aPeliculas[Ultimo]) ==
+        }
+
+        
     }
 }
